@@ -4,7 +4,7 @@ public class ExercicioBalanco {
 	
 	Scanner read = new Scanner(System.in);
 	
-		int agua, luz, tlm,	despesas, quotas, recBaile, recBar, receitas;
+		int agua, luz, tlm, despesas, quotas, recBaile, recBar, receitas;
 			
 	public ExercicioBalanco() {
 		// TODO Auto-generated constructor stub
@@ -21,7 +21,7 @@ public class ExercicioBalanco {
 		
 		//Calculo Balanco
 		
-		int balanco = receitas + despesas;
+		int balanco = receitas - despesas;
 		
 		System.out.println("\nReceita : \n\n "
 				+ " Quotas: " + quotas 
@@ -39,22 +39,26 @@ public class ExercicioBalanco {
 		if((receitas-despesas) < 0){
 			System.out.println("\nBalanço negativo");
 		}
-		else{
+		else if((receitas-despesas) > 0){
 			System.out.println("\nBalanço positivo");
 		}
+		else{
+			System.out.println("\nBalanço neutro");
+		}
+			
 	}
 
 	public void calcularReceitas(){
 		
-		System.out.println("Receitas:\n");
+		System.out.println("\nReceitas:\n");
 		
-		System.out.println("Quotas: ");
+		System.out.println("Quanto obteve de quotas: ");
 		quotas = read.nextInt();
 		
-		System.out.println("\nBaile: ");
+		System.out.println("\nQuanto obteve no baile: ");
 		recBaile = read.nextInt();
 		
-		System.out.println("\nBar: ");
+		System.out.println("\nQuanto obteve no bar: ");
 		recBar = read.nextInt();
 		
 		receitas = quotas + recBaile + recBar;
@@ -63,15 +67,15 @@ public class ExercicioBalanco {
 	
 	public void calcularDespesas(){
 		
-		System.out.println("Despesas:\n");
+		System.out.println("\n\nDespesas:\n");
 		
-		System.out.println("Agua: ");
+		System.out.println("Quanto gastou em agua: ");
 		agua = read.nextInt();
 		
-		System.out.println("\nLuz: ");
+		System.out.println("\nQuanto gastou em luz: ");
 		luz = read.nextInt();
 		
-		System.out.println("\nTelemovel: ");
+		System.out.println("\nQuanto gastou em telemovel: ");
 		tlm = read.nextInt();
 		
 		despesas = agua + luz + tlm;
