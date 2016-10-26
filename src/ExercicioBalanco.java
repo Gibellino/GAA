@@ -4,14 +4,7 @@ public class ExercicioBalanco {
 	
 	Scanner read = new Scanner(System.in);
 	
-		int agua = 80,
-			luz = 60,
-			tlm = 70,
-			despesas,
-			quotas,
-			recBaile,
-			recBar,
-			receitas;
+		int agua, luz, tlm,	despesas, quotas, recBaile, recBar, receitas;
 			
 	public ExercicioBalanco() {
 		// TODO Auto-generated constructor stub
