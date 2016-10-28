@@ -10,12 +10,12 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//new ExercicioBalanco();
-		new InOutputBasico();
+		new ExercicioBalanco();
+		//new InOutputBasico();
 		
-		System.out.println("\nCalculadora (Adição)\n");
+		/*System.out.println("\nCalculadora (Adição)\n");
 		
-		new CalculadoraBasica();
+		new CalculadoraBasica();*/
 		
 	}
 

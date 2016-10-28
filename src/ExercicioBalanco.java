@@ -4,26 +4,21 @@ public class ExercicioBalanco {
 	
 	Scanner read = new Scanner(System.in);
 	
-		int agua, luz, tlm, despesas, quotas, recBaile, recBar, receitas;
+	int agua, luz, tlm, despesas, quotas, recBaile, recBar, receitas, balanco;
 			
 	public ExercicioBalanco() {
 		// TODO Auto-generated constructor stub
 		
-		System.out.println("Olá, Turma.");
-		
 		//Calculo Receitas
-		
-		calcularReceitas();
+		receitas();
 		
 		//Calculo Despesas
-		
-		calcularDespesas();
+		despesas();
 		
 		//Calculo Balanco
+		balanco();
 		
-		int balanco = receitas - despesas;
-		
-		System.out.println("\nReceita : \n\n "
+		System.out.println("\nReceita :\n\n "
 				+ " Quotas: " + quotas 
 				+ " €\n  Baile: " + recBaile 
 				+ " €\n  Bar: " + recBar 
@@ -36,19 +31,12 @@ public class ExercicioBalanco {
 				+ " €\n\nBalanço: " + balanco
 				+ " €");
 		
-		if((receitas-despesas) < 0){
-			System.out.println("\nBalanço negativo");
-		}
-		else if((receitas-despesas) > 0){
-			System.out.println("\nBalanço positivo");
-		}
-		else{
-			System.out.println("\nBalanço neutro");
-		}
+		//Verificar se balanço é positivo ou não
+		cbalanco();
 			
 	}
 
-	public void calcularReceitas(){
+	public void receitas(){
 		
 		System.out.println("\nReceitas:\n");
 		
@@ -65,7 +53,7 @@ public class ExercicioBalanco {
 		
 	}
 	
-	public void calcularDespesas(){
+	public void despesas(){
 		
 		System.out.println("\n\nDespesas:\n");
 		
@@ -79,6 +67,26 @@ public class ExercicioBalanco {
 		tlm = read.nextInt();
 		
 		despesas = agua + luz + tlm;
+		
+	}
+	
+	public void balanco(){
+		
+		balanco = receitas - despesas;
+		
+	}
+	
+	public void cbalanco(){
+		
+		if(balanco < 0){
+			System.out.println("\nBalanço negativo");
+		}
+		else if(balanco > 0){
+			System.out.println("\nBalanço positivo");
+		}
+		else{
+			System.out.println("\nBalanço neutro");
+		}		
 		
 	}
 }
