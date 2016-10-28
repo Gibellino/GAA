@@ -1,3 +1,5 @@
+import dia281016.CalculadoraBasica;
+import dia281016.InOutputBasico;
 
 public class Principal {
 
@@ -8,7 +10,12 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		new ExercicioBalanco();
+		//new ExercicioBalanco();
+		new InOutputBasico();
+		
+		System.out.println("\nCalculadora (Adição)\n");
+		
+		new CalculadoraBasica();
 		
 	}
 

@@ -28,7 +28,7 @@ public class ExercicioBalanco {
 				+ " €\n  Baile: " + recBaile 
 				+ " €\n  Bar: " + recBar 
 				+ " €\n\n  Total Receitas: " + receitas
-				+ " €;\n\nDespesas : \n\n"
+				+ " €\n\nDespesas : \n\n"
 				+ "  agua: " + agua
 				+ " €\n  luz: " + luz
 				+ " €\n  telemovel: " + tlm
