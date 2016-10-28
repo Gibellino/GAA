@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class Adivinha {
 
 	int n1, n2, op;
-	final int MAX = 5;
+    int max = 5;
 	
+	Random r = new Random();
 	Scanner input = new Scanner(System.in);
 	
 	public Adivinha() {
@@ -16,11 +17,9 @@ public class Adivinha {
 	
 		do{
 			
-			Random r = new Random();
+			numeroR();
 			
-			n1 = r.nextInt(MAX);
-			
-			System.out.println("\nAdivinha!\n\nEscolha um número de 0 a 5 (3 tentativas): ");
+			System.out.println("\nAdivinha!\n\nEscolha um número de 0 a " + max + " (3 tentativas): ");
 			
 			tentar();
 			
@@ -41,7 +40,7 @@ public class Adivinha {
 			
 			n2 = input.nextInt();
 			
-			if(n2 >= 0 && n2 <= 5){
+			if(n2 >= 0 && n2 <= max){
 				if(n1 == n2){
 					System.out.println("Parabens! Acetaste à " + (i+1) + "º tentativa.");
 					i = 2;
@@ -54,9 +53,19 @@ public class Adivinha {
 				}
 			}
 			else{
-				System.out.println("\nO número introduzido não é válido! Por favor, escolhe um número de 0 a 5!\n");
+				System.out.println("\nO número introduzido não é válido! Por favor, escolhe um número de 0 a " + max + "!\n");
 			}
 		}
+	}
+	
+	public void numeroR(){
+		
+		System.out.println("\nEscolhe um número máximo(O número por default é 5):");
+		
+		max = input.nextInt();
+		
+		n1 = r.nextInt(max);
+		
 	}
 
 }
