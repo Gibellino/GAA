@@ -13,33 +13,35 @@ public class CalculadoraBasica {
 		
 		do{
 		
-		System.out.println("    Menu:\n 1 - Adição;\n 2 - Subtração;\n 3 - Multiplicação;\n 4 - Divisão;\n 0 - Sair;\n\nInsira a opção que deseja: ");
-		
-		op = input.nextInt();
-		
-		switch(op){
-		
-		case 1: soma(); break;
-		
-		case 2: subtracao(); break;
-		
-		case 3: multi(); break;
-		
-		case 4: divi(); break;
-		
-		case 0: System.out.println("\nVai Sair!!\n"); break;
-		
-		default: System.out.println("\nOpção Inválida\n");
+			System.out.println("    Menu:\n "
+					+ "1 - Adição;\n "
+					+ "2 - Subtração;\n "
+					+ "3 - Multiplicação;\n "
+					+ "4 - Divisão;\n "
+					+ "0 - Sair;\n\n"
+					+ "Insira a opção que deseja: ");
+			
+			op = input.nextInt();
+			
+			switch(op){
+			
+				case 1: soma(); break;
+				
+				case 2: subtracao(); break;
+				
+				case 3: multi(); break;
+				
+				case 4: divi(); break;
+				
+				case 0: System.out.println("\nVai Sair!!\n"); break;
+				
+				default: System.out.println("\nOpção Inválida\n");
+			
+			}
 		
 		}
 		
-		System.out.println("\n");
-		
-		}
-		
-		while(op != 0);
-		
-		
+		while(op != 0);	
 		
 	}
 	
