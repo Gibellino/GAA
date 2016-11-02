@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import dia021116.CalculadoraInfinita;
+import dia021116.CalculadoraInfinita2;
 import dia021116.Ciclos;
 import dia021116.Condicionais;
 import dia281016.Adivinha;
@@ -30,6 +31,7 @@ public class Principal {
 				+ "5 - Condicionais;\n "
 				+ "6 - Ciclos;\n "
 				+ "7 - Calculadora Infinita;\n "
+				+ "8 - Calculadora Infinita v2;\n "
 				+ "0 - Sair;\n\n"
 				+ "Insira a opção que deseja: ");
 		
@@ -50,6 +52,8 @@ public class Principal {
 		case 6: System.out.println("\n"); new Ciclos(); break;
 		
 		case 7: System.out.println("\n"); new CalculadoraInfinita(); break;
+		
+		case 8: System.out.println("\n"); new CalculadoraInfinita2(); break;
 		
 		case 0: System.out.println("\nVai Sair!!\n"); break;
 		
