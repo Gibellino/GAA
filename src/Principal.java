@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import dia021116.Blackjack;
 import dia021116.CalculadoraInfinita;
 import dia021116.CalculadoraInfinita2;
 import dia021116.Ciclos;
@@ -32,6 +33,7 @@ public class Principal {
 				+ "6 - Ciclos;\n "
 				+ "7 - Calculadora Infinita;\n "
 				+ "8 - Calculadora Infinita v2;\n "
+				+ "9 - Blackjack;\n "
 				+ "0 - Sair;\n\n"
 				+ "Insira a opção que deseja: ");
 		
@@ -54,6 +56,8 @@ public class Principal {
 		case 7: System.out.println("\n"); new CalculadoraInfinita(); break;
 		
 		case 8: System.out.println("\n"); new CalculadoraInfinita2(); break;
+		
+		case 9: System.out.println("\n"); new Blackjack(); break;
 		
 		case 0: System.out.println("\nVai Sair!!\n"); break;
 		
