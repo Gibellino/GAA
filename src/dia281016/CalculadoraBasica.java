@@ -11,9 +11,10 @@ public class CalculadoraBasica {
 		
 		int op;
 		
+		
 		do{
 		
-			System.out.println("    Menu:\n "
+			System.out.println("\tMenu:\n "
 					+ "1 - Adição;\n "
 					+ "2 - Subtração;\n "
 					+ "3 - Multiplicação;\n "

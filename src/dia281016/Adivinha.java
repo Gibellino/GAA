@@ -12,7 +12,7 @@ public class Adivinha {
 	Scanner input = new Scanner(System.in);
 	
 	public Adivinha() {
-		// TODO Auto-generated constructor stu
+		// TODO Auto-generated constructor stub
 		
 	
 		do{
