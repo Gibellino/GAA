@@ -19,6 +19,7 @@ public class Blackjack {
 		int cartap = 0;
 		int cartad = 0;
 		int op;
+		int cont= 0;
 		
 		//int[] cartas = new int[]{1,2,3,4,5,6,7,8,9,10,10,10,10};
 		
@@ -77,11 +78,12 @@ public class Blackjack {
 					System.out.print(player[i] + " (Total: " + cartap + ")\n");
 				}
 			}
+			cont++;
 		}
 		
 		System.out.printf("\nCartas do dealer: ");
 		
-		for(int i=0;i<2;i++){
+		for(int i=0;i<cont;i++){
 			if(i < 1){
 				if(dealer[i] == 1){
 					cartad = 1;
@@ -135,21 +137,61 @@ public class Blackjack {
 				int c = receber();
 				if(player[i] == 0){
 					player[i] = c;
-					i=10;
 				}
 				int c2 = receber();
 				if(dealer[i] == 0){
 					dealer[i] = c2;
-					i=10;
 				}
+				i = 10;
+				cont++;
 			}
 		}
 		
-		for(int i=0;i<10;i++){
-			if(player[i] != 0){
-				System.out.print(player[i] + " ");
+		for(int i=0;i<cont;i++){
+				if(i < cont){
+					if(player[i] == 1){
+						cartap = 1;
+						System.out.printf("A,");
+					}
+					else if(player[i] == 10){
+						cartap = 10;
+						System.out.printf("J,");
+					}
+					else if(player[i] == 11){
+						cartap = 10;
+						System.out.printf("Q,");
+					}
+					else if(player[i] == 12){
+						cartap = 10;
+						System.out.printf("K,");
+					}
+					else{
+						cartap = player[i];
+						System.out.print(player[i] + ",");
+					}
+				}else{
+					if(player[i] == 1){
+						cartap = cartap + 1;
+						System.out.printf("A (Total: " + cartap + ")\n");
+					}
+					else if(player[i] == 10){
+						cartap = cartap + 10;
+						System.out.printf("J (Total: " + cartap + ")\n");
+					}
+					else if(player[i] == 11){
+						cartap = cartap + 10;
+						System.out.printf("Q (Total: " + cartap + ")\n");
+					}
+					else if(player[i] == 12){
+						cartap = cartap + 10;
+						System.out.printf("K (Total: " + cartap + ")\n");
+					}
+					else{
+						cartap = cartap + player[i];
+						System.out.print(player[i] + " (Total: " + cartap + ")\n");
+					}
+				}
 			}
-		}
 	}
 	
 	public int receber(){
