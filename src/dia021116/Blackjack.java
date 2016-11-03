@@ -132,22 +132,27 @@ public class Blackjack {
 		System.out.println("\n Deseja mais uma carta? 1-Sim 0-Não");
 		op = input.nextInt();
 		
-		if(op == 1){
+		switch(op){
+		case 1:
 			for(int i=0;i<10;i++){
 				int c = receber();
 				if(player[i] == 0){
 					player[i] = c;
+					i = 10;
+					cont++;
 				}
+				else{
+					i--;
+				}
+			}
+			for(int i=0;i<10;i++){
 				int c2 = receber();
 				if(dealer[i] == 0){
 					dealer[i] = c2;
 				}
-				i = 10;
-				cont++;
 			}
-		}
 		
-		for(int i=0;i<cont;i++){
+			for(int i=0;i<cont;i++){
 				if(i < cont){
 					if(player[i] == 1){
 						cartap = 1;
@@ -192,12 +197,26 @@ public class Blackjack {
 					}
 				}
 			}
+			break;
+			
+		case 0: System.out.println("Vai Sair!!"); break;
+		
+		default: System.out.println("Opção Inválida!");
+		}
 	}
 	
 	public int receber(){
 		
-		return r.nextInt(13-1) + 1;
+		int n = r.nextInt(13-1) + 1;
 		
+		if(n==0){
+			n = r.nextInt(13-1) + 1;
+		}
+		else{
+			n=n;
+		}
+		
+		return n;
 	}
 
 }
